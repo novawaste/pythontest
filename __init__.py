@@ -746,9 +746,9 @@ class _ETreeXmlToObject(object):
                 if title:
                     properties['name'] = title
             else:
-                id = element.findtext('./atom:id', '', _etree_entity_feed_namespaces)
-                if id:
-                    properties['name'] = _get_readable_id(id, id_prefix_to_skip)
+                vid = element.findtext('./atom:id', '', _etree_entity_feed_namespaces)
+                if vid:
+                    properties['name'] = _get_readable_id(vid, id_prefix_to_skip)
 
         return properties
 
